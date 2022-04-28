@@ -1,0 +1,47 @@
+Process
+A process is basically a program in execution. The execution of a process must progress in a sequential fashion.
+
+A process is defined as an entity which represents the basic unit of work to be implemented in the system.
+To put it in simple terms, we write our computer programs in a text file and when we execute this program, it becomes a process which performs all the tasks mentioned in the program.
+
+When a program is loaded into the memory and it becomes a process, it can be divided into four sections ─ stack, heap, text and data. The following image shows a simplified layout of a process inside main memory −
+
+Process Components
+S.N.	Component & Description
+1	
+Stack
+
+The process Stack contains the temporary data such as method/function parameters, return address and local variables.
+
+2	
+Heap
+
+This is dynamically allocated memory to a process during its run time.
+
+3	
+Text
+
+This includes the current activity represented by the value of Program Counter and the contents of the processor's registers.
+
+4	
+Data
+
+This section contains the global and static variables.
+
+Program
+A program is a piece of code which may be a single line or millions of lines. A computer program is usually written by a computer programmer in a programming language. For example, here is a simple program written in C programming language −
+
+#include <stdio.h>
+
+int main() {
+   printf("Hello, World! \n");
+   return 0;
+}
+A computer program is a collection of instructions that performs a specific task when executed by a computer. When we compare a program with a process, we can conclude that a process is a dynamic instance of a computer program.
+
+A part of a computer program that performs a well-defined task is known as an algorithm. A collection of computer programs, libraries and related data are referred to as a software.
+
+Process Life Cycle
+When a process executes, it passes through different states. These stages may differ in different operating systems, and the names of these states are also not standardized.
+
+In general, a process can have one of the following five states at a time

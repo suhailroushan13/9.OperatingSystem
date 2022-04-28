@@ -1,0 +1,29 @@
+n operating system is a software that manages all applications on a device and basically helps in the smooth functioning of our computer. Because of this reason, the operating system has to perform many tasks, and sometimes simultaneously. This isn't usually a problem unless these simultaneously occurring processes use a common resource.
+
+For example, consider a bank that stores the account balance of each customer in the same database. Now suppose you initially have x rupees in your account. Now, you take out some amount of money from your bank account, and at the same time, someone tries to look at the amount of money stored in your account. As you are taking out some money from your account, after the transaction, the total balance left will be lower than x. But, the transaction takes time, and hence the person reads x as your account balance which leads to inconsistent data. If in some way, we could make sure that only one process occurs at a time, we could ensure consistent data.
+
+What is Process Synchronization in OS
+
+In the above image, if Process1 and Process2 happen at the same time, user 2 will get the wrong account balance as Y because of Process1 being transacted when the balance is X.
+
+Inconsistency of data can occur when various processes share a common resource in a system which is why there is a need for process synchronization in the operating system.
+
+How Process Synchronization in OS Works?
+Let us take a look at why exactly we need Process Synchronization. For example, If a process1 is trying to read the data present in a memory location while another process2 is trying to change the data present at the same location, there is a high chance that the data read by the process1 will be incorrect.
+
+Working of Process Synchronization in OS
+
+Let us look at different elements/sections of a program:
+
+Entry Section: The entry Section decides the entry of a process.
+Critical Section: Critical section allows and makes sure that only one process is modifying the shared data.
+Exit Section: The entry of other processes in the shared data after the execution of one process is handled by the Exit section.
+Remainder Section: The remaining part of the code which is not categorized as above is contained in the Remainder section.
+Race Condition
+When more than one process is either running the same code or modifying the same memory or any shared data, there is a risk that the result or value of the shared data may be incorrect because all processes try to access and modify this shared resource. Thus, all the processes race to say that my result is correct. This condition is called the race condition. Since many processes use the same data, the results of the processes may depend on the order of their execution.
+
+This is mostly a situation that can arise within the critical section. In the critical section, a race condition occurs when the end result of multiple thread executions varies depending on the sequence in which the threads execute.
+
+But how to avoid this race condition? There is a simple solution:
+
+by treating the critical section as a section that can be accessed by only a single process at a time. This kind of section is called an atomic section.
